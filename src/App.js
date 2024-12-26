@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './Components/Header.css'; 
+import './Components/Box.css'; 
+import Header from './Components/Header';
+import LoadingScreen from './Components/LoadingScreen';
+import Box from './Components/Box';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simular una carga de datos
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Cambia el tiempo según sea necesario
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loading ? <LoadingScreen /> : (
+        <>
+          <Header />
+          <Box videoSrc="/videos/MASCOTAS AMIGAS.mp4" />
+        </>
+      )}
     </div>
   );
 }
