@@ -6,10 +6,11 @@
   width: 90%;
     max-width: 1000px;
     padding: 20px;
+    z-index: -1;
 }
 
 .box video {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  object-fit: cover; /* Asegura que el video cubra todo el contenedor */
 }

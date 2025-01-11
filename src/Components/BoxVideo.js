@@ -1,5 +1,5 @@
 import React from 'react';
-import './Box.css';
+import './BoxVideo.css';
 
 function Box({ videoSrc }) {
   return (
