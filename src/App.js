@@ -7,6 +7,7 @@ import LoadingScreen from './Components/LoadingScreen';
 import NavBar from './Components/NavBar';
 import Box from './Components/BoxVideo';
 import BackgroundScreen from './Components/BackgroundScreen';
+import ImageComponent from './Components/ImageComponent';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,9 +25,10 @@ function App() {
         <>
           <NavBar />
           <BackgroundScreen>
-            <Box videoSrc="/videos/MASCOTAS AMIGAS.mp4" />
+            <Box videoSrc="/videos/Brother.mp4" />
           </BackgroundScreen>
           <Header />
+          <ImageComponent />
         </>
       )}
     </div>

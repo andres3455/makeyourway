@@ -1,14 +1,13 @@
 .App-header {
   position: relative;
-  background-color: transparent; /* Hacer el fondo transparente para ver el video */
   min-height: 100vh;
-  display: flex; /* Cambiado de grid a flex para mejor alineación */
+  display: flex; 
   flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Alinea el contenido al centro horizontalmente */
-  font-size: 50px; /* Tamaño de fuente igual al de la pantalla de carga */
-  color: rgb(255, 255, 255); /* Color de texto igual al de la pantalla de carga */
-  font-style: italic;
+  justify-content: flex-start;
+  align-items: center; 
+  font-size: 40px; 
+  color: rgb(255, 255, 255); 
+  font-family: italic;
   font-weight: 100;
-  z-index: 1; /* Asegura que el encabezado esté por encima del video */
+  z-index: 1; 
 }
