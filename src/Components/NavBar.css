@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed; /* Asegura que se mantenga fija al hacer scroll */
+  position: absolute; /* Asegura que se mantenga fija al hacer scroll */
   top: 0;
   width: 100%;
   z-index: 10;

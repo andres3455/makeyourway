@@ -4,7 +4,7 @@ import './ImageComponent.css';
 const ImageComponent = () => {
   return (
     <div className="image-container">
-      <img src="/videos/Imagen1.jpg" alt="Descripción de la imagen" />
+      <img src="/recursos/Imagen1.jpg" alt="Descripción de la imagen" />
     </div>
   );
 }

@@ -25,7 +25,7 @@ function App() {
         <>
           <NavBar />
           <BackgroundScreen>
-            <Box videoSrc="/videos/Brother.mp4" />
+            <Box videoSrc="/recursos/Brother.mp4" />
           </BackgroundScreen>
           <Header />
           <ImageComponent />
