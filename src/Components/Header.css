@@ -1,5 +1,5 @@
 .App-header {
-  position: relative;
+  position: relative; /* Asegura que el encabezado ocupe su espacio natural */
   min-height: 100vh;
   display: flex; 
   flex-direction: column;
@@ -7,7 +7,8 @@
   align-items: center; 
   font-size: 40px; 
   color: rgb(255, 255, 255); 
-  font-family: italic;
+  font-family: 'Arial', sans-serif; /* Cambia la fuente a Arial */
   font-weight: 100;
-  z-index: 1; 
+  z-index: 1; /* Asegura que el encabezado esté debajo de los videos */
+  background: transparent;
 }

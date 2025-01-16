@@ -4,7 +4,7 @@
   width: 100%;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0); /* Hacer la barra de navegación transparente */
-  padding: 5px 20px; /* Ajusta el padding para subir la barra de navegación */
+  padding: 5px 20px; 
   color: white;
 }
 

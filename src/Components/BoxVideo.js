@@ -1,11 +1,12 @@
 import React from 'react';
 import './BoxVideo.css';
 
-function Box({ videoSrc }) {
+const Box = ({ videoSrc, className }) => {
   return (
-    <div className="box">
+    <div className={`box ${className}`}>
       <video autoPlay loop muted>
-        <source src={process.env.PUBLIC_URL + videoSrc} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
     </div>
   );
