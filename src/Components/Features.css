@@ -1,14 +1,22 @@
+
+*{
+  box-sizing: border-box; 
+}
 .features {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    gap: 20px;
-    padding: 40px;
+    margin: 0;
+    padding: 0;
+    gap: 10px; 
+    margin-top: 20px;
   }
   
   .feature {
     background-color: #333; /* Fondo oscuro para las tarjetas */
     color: #fff; /* Texto en blanco */
+    margin: 0;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -23,7 +31,19 @@
   }
   
   .feature p {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.5;
   }
+
+  .FinalText {
+    color: #fff;
+    margin: 0;/* Ajusta los márgenes superior e inferior */
+    padding: 0; /* Asegúrate de no agregar padding innecesario */
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+    margin-top: 300px;
+    margin-bottom: 0;
+}
+
   
