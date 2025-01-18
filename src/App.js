@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Estilos globales
 import './Components/Header.css'; 
 import './Components/BoxVideo.css'; 
 import './Components/BackgroundScreen.css';
 import './Components/Features.css';
+
+// Componentes
 import Header from './Components/Header';
 import LoadingScreen from './Components/LoadingScreen';
 import NavBar from './Components/NavBar';
 import Box from './Components/BoxVideo';
 import BackgroundScreen from './Components/BackgroundScreen';
 
+// Páginas
 import QuienesSomos from './Pages/QuienesSomos';
 import Prendas from './Pages/Prendas';
 import RedesSociales from './Pages/RedesSociales';
@@ -17,11 +22,9 @@ import RedesSociales from './Pages/RedesSociales';
 function App() {
   const [loading, setLoading] = useState(true);
 
+  // Simulación de carga inicial
   useEffect(() => {
-    // Simular una carga de datos
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Cambia el tiempo según sea necesario
+    setTimeout(() => setLoading(false), 3000); // Ajusta el tiempo si es necesario
   }, []);
 
   return (
@@ -30,13 +33,13 @@ function App() {
         <LoadingScreen />
       ) : (
         <Router>
-          <NavBar />
           <Routes>
             {/* Página principal */}
             <Route
               path="/"
               element={
                 <>
+                  <NavBar /> {/* Solo se renderiza aquí */}
                   <BackgroundScreen />
                   <div className="video-container">
                     <Box videoSrc="/recursos/Brother.mp4" className="left" />
@@ -78,15 +81,38 @@ function App() {
               }
             />
             {/* Páginas adicionales */}
-            <Route path="/quienes-somos" element={<QuienesSomos />} />
-            <Route path="/prendas" element={<Prendas />} />
-            <Route path="/redes-sociales" element={<RedesSociales />} />
+            <Route
+              path="/quienes-somos"
+              element={
+                <>
+                  <BackgroundScreen />
+                  <QuienesSomos />
+                </>
+              }
+            />
+            <Route
+              path="/prendas"
+              element={
+                <>
+                  <BackgroundScreen />
+                  <Prendas />
+                </>
+              }
+            />
+            <Route
+              path="/redes-sociales"
+              element={
+                <>
+                  <BackgroundScreen />
+                  <RedesSociales />
+                </>
+              }
+            />
           </Routes>
         </Router>
       )}
     </div>
   );
 }
-
 
 export default App;
